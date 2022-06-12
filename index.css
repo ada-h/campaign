@@ -52,14 +52,6 @@ header{
     transition-timing-function: linear;
     transition-duration: 1s;
 }
-/* .img-gallery{
-    width: 100%;
-    height: auto;
-    
-} */
-/* .gallery{
-    margin-bottom: 20px;
-} */
 .content-gallery{
     -webkit-column-count:4;
     -moz-column-count:4;
@@ -120,7 +112,6 @@ header{
 .share-container{
     display: flex;
     justify-content: space-between;
-
 
 }
 .nigeria{
@@ -183,3 +174,13 @@ footer{
     }
   }
   
+.contribute{
+    padding: 10px;
+    background-color: #fefefe;
+    color: black;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+}
+
+
