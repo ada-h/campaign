@@ -10,9 +10,9 @@ let gallery = [
 
 let gallerylist  = document.getElementsByClassName("content-gallery")[0];
 
-function displayGallery(){
-    for(let i=0; i < gallery.length; i++){
-        let val = gallery[i]
+function displayGallery(list){
+    for(let i=0; i < list.length; i++){
+        let val = list[i]
         if(val.type === "img"){
             gallerylist.innerHTML += `<div class="gallery">
                 <img class="img-gallery" src=${val.src} alt="img-gallery" />
@@ -89,7 +89,7 @@ function displayGallery(){
     }
     return gallerylist;
 }
-displayGallery()
+displayGallery(gallery)
 
 //share link
 function copyText(val){
@@ -99,4 +99,10 @@ function copyText(val){
     textField.select();
     document.execCommand("copy");
     textField.remove();
+}
+
+function filteroptions(type){
+    gallerylist.innerHTML = "";
+    let filtered = gallery.filter(all => all.type === type);
+    displayGallery(filtered);
 }
