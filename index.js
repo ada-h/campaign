@@ -1,14 +1,18 @@
 let gallery = [
-    {id: 9, type: 'img', src: "./assets/campaign-images/2.jpeg", language: "hausa"},
+    
+    {id: 10, type: 'img', src: "https://pbs.twimg.com/media/FVELAbNWQAAQ1W4?format=jpg&name=900x900", language: "eng"},
+    {id: 11, type: 'img', src: "./assets/campaign-images/2.jpeg", language: "hausa"},
     {id: 8, type: 'img', src: "https://pbs.twimg.com/media/FUb7hrgX0AEwePq?format=jpg&name=medium", language: "eng"},
     {id: 1, type: 'tags', src: "#OBIdent", language: "eng"},
     {id: 2, type: 'img', src: "https://moneycentral.com.ng/wp-content/uploads/2022/06/Peter-Obi-2023.jpg", language: "eng"},
+    // {id: 12, type: 'tags', src: "#PeterObi4President2023", language: "eng"},
     {id: 9, type: 'img', src: "https://pbs.twimg.com/media/FVBUy0gWUAAOBIQ?format=jpg&name=medium", language: "eng"},
     {id: 3, type: 'img', src: "https://www.theafricareport.com/media/2022/05/obi-e1651492034434-732x419.jpeg", language: "eng"},
     {id: 4, type: 'tags', src: "#PeterObi4President", language: "eng"},
-    {id: 5, type: 'tags', src: "#TakeBackNaija", language: "eng"},
+    // {id: 5, type: 'tags', src: "#TakeBackNaija", language: "eng"},
     {id: 6, type: 'audio', src: "/media/cc0-audio/t-rex-roar.mp3", language: "eng"},
     {id: 7, type: 'video', src: "https://twitter.com/i/status/1532629465070706688", language: "eng"},
+    {id: 13, type: 'img', src: "https://pbs.twimg.com/media/FVBukOhX0AAoCX-?format=jpg&name=large", language: "eng"},
 ]
 
 let gallerylist  = document.getElementsByClassName("content-gallery")[0];

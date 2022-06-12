@@ -93,7 +93,8 @@ header{
   .img-gallery {
     width:100%;
     height:auto;
-    margin: 4% auto;
+    /* margin: 4% auto; */
+    /* margin: 10% auto; */
     cursor: pointer;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
@@ -115,7 +116,6 @@ header{
 
 }
 .nigeria{
-    /* color: rgba(92,184,92,0.8); */
     background-image: linear-gradient(to left, green, white, green, green, white, green, white);
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -149,6 +149,8 @@ footer{
 }
 .gallery{
     box-shadow:-3px 5px 15px #000;
+    margin: 4% auto;
+
 }
 @keyframes wiggle {
     0%, 7% {
