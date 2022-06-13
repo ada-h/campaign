@@ -1,18 +1,17 @@
 let gallery = [
     
-    {id: 10, type: 'img', src: "https://pbs.twimg.com/media/FVELAbNWQAAQ1W4?format=jpg&name=900x900", language: "eng"},
+    {id: 10, type: 'img', src: "./assets/campaign-images/4.jpeg", language: "eng"},
     {id: 11, type: 'img', src: "./assets/campaign-images/2.jpeg", language: "hausa"},
-    {id: 8, type: 'img', src: "https://pbs.twimg.com/media/FUb7hrgX0AEwePq?format=jpg&name=medium", language: "eng"},
-    {id: 1, type: 'tags', src: "#OBIdent", language: "eng"},
-    {id: 2, type: 'img', src: "https://moneycentral.com.ng/wp-content/uploads/2022/06/Peter-Obi-2023.jpg", language: "eng"},
-    // {id: 12, type: 'tags', src: "#PeterObi4President2023", language: "eng"},
-    {id: 9, type: 'img', src: "https://pbs.twimg.com/media/FVBUy0gWUAAOBIQ?format=jpg&name=medium", language: "eng"},
-    {id: 3, type: 'img', src: "https://www.theafricareport.com/media/2022/05/obi-e1651492034434-732x419.jpeg", language: "eng"},
-    {id: 4, type: 'tags', src: "#PeterObi4President", language: "eng"},
-    // {id: 5, type: 'tags', src: "#TakeBackNaija", language: "eng"},
-    {id: 6, type: 'audio', src: "/media/cc0-audio/t-rex-roar.mp3", language: "eng"},
-    {id: 7, type: 'video', src: "https://twitter.com/i/status/1532629465070706688", language: "eng"},
-    {id: 13, type: 'img', src: "https://pbs.twimg.com/media/FVBukOhX0AAoCX-?format=jpg&name=large", language: "eng"},
+    {id: 8, type: 'img', src: "./assets/campaign-images/3.jpeg", language: "eng"},
+    {id: 1, type: 'tags', src: "OBIdent", language: "eng"},
+    {id: 2, type: 'img', src: "./assets/campaign-images/5.jpeg", language: "eng"},
+    {id: 12, type: 'tags', src: "#PeterObi4President2023", language: "eng"},
+    {id: 9, type: 'img', src: "./assets/campaign-images/1.jpeg", language: "eng"},
+    {id: 4, type: 'tags', src: "PeterObi4President", language: "eng"},
+     {id: 5, type: 'tags', src: "TakeBackNaija", language: "eng"},
+    // {id: 6, type: 'audio', src: "/media/cc0-audio/t-rex-roar.mp3", language: "eng"},
+    // {id: 7, type: 'video', src: "https://twitter.com/i/status/1532629465070706688", language: "eng"},
+    {id: 13, type: 'img', src: "./assets/campaign-images/6.jpeg", language: "eng"},
 ]
 
 let gallerylist  = document.getElementsByClassName("content-gallery")[0];
@@ -30,16 +29,6 @@ function displayGallery(list){
                 </a>
                     <div>
                         <img onclick=copyText("${val.src}")  class="icon" src="./assets/share.png" alt="share" />
-                        <span> 
-                            <a target="_blank" class="twitter-share-button"
-                                href="https://twitter.com/intent/tweet?url=${val.src}">
-                                <img class="minicons" src="./assets/twitter.png" alt="twitter" />
-                            </a>
-                            
-                            <img class="minicons" src="./assets/facebook.png" alt="facebook" />
-                            <img class="minicons" src="./assets/instagram.png" alt="instagram" />
-                            <img class="minicons" src="./assets/whatsapp.png" alt="instagram" />
-                        </span>
                     </div>
                 </div>
             </div>`
@@ -54,12 +43,6 @@ function displayGallery(list){
             <img  class="icon" src="./assets/download.png" alt="share" />
             <div>
                 <img onclick=copyText("${val.src}")  class="icon" src="./assets/share.png" alt="share" />
-                <span> 
-                    <img class="minicons" src="./assets/twitter.png" alt="twitter" />
-                    <img class="minicons" src="./assets/facebook.png" alt="facebook" />
-                    <img class="minicons" src="./assets/instagram.png" alt="instagram" />
-                    <img class="minicons" src="./assets/whatsapp.png" alt="instagram" />
-                </span>
             </div>
         </div>
         </div> `
@@ -75,33 +58,28 @@ function displayGallery(list){
                 <img  class="icon" src="./assets/download.png" alt="share" />
                 <div>
                     <img onclick=copyText("${val.src}")  class="icon" src="./assets/share.png" alt="share" />
-                    <span> 
-                        <img class="minicons" src="./assets/twitter.png" alt="twitter" />
-                        <img class="minicons" src="./assets/facebook.png" alt="facebook" />
-                        <img class="minicons" src="./assets/instagram.png" alt="instagram" />
-                        <img class="minicons" src="./assets/whatsapp.png" alt="instagram" />
-                    </span>
                 </div>
             </div>
         </div> `
         }else{
-            gallerylist.innerHTML += `<div class="audio-gallery">
-            <p> ${val.src}</p> 
-            <div class="share-container">
-                <img onclick=copyText("${val.src}") class="icon" src="./assets/share.png" alt="share" />
-                <div>    
-                    <span> 
-                    <a target="_blank" class="twitter-share-button"
-                    href="https://twitter.com/intent/tweet?text="some text"&hashtags=${val.src}">
-                    <img class="minicons" src="./assets/twitter.png" alt="twitter" />
-                </a>
-                        <img class="minicons" src="./assets/facebook.png" alt="facebook" />
-                        <img class="minicons" src="./assets/instagram.png" alt="instagram" />
-                        <img class="minicons" src="./assets/whatsapp.png" alt="instagram" />
-                    </span>
+            gallerylist.innerHTML +=
+            `<div class="audio-gallery">
+                <p> ${"#" + val.src}</p> 
+                <div class="share-container">
+                    <img onclick=copyText("${val.src}") class="icon" src="./assets/share.png" alt="share" />
+                    <div>    
+                        <span> 
+                            <a target="_blank" class="twitter-share-button"
+                                href="https://twitter.com/intent/tweet?hashtags=${val.src}">
+                                <img class="minicons" src="./assets/twitter.png" alt="twitter" />
+                            </a>
+                            <a target="_blank" href="https://api.whatsapp.com/send?text=${val.src}" data-action="share/whatsapp/share"> 
+                                 <img class="minicons" src="./assets/whatsapp.png" alt="whatsapp" />
+                            </a>
+                        </span>
+                    </div>
                 </div>
-            </div>
-        </div>`
+            </div>`
         }
     }
     return gallerylist;
@@ -120,12 +98,20 @@ function copyText(val){
 
 function filteroptions(type){
     gallerylist.innerHTML = "";
+    if(type === ""){
+        return displayGallery(gallery);
+    }
     let filtered = gallery.filter(all => all.type === type);
     displayGallery(filtered);
+    
 }
+
+
 
 //todo list
 //share functionalities
 //give people credit to encourage people to contribute
 //add option to contribute
 //filter by language
+//share on facebook 
+//share on instagram
