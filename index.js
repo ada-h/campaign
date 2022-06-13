@@ -24,12 +24,13 @@ function displayGallery(list){
             `<div class="gallery">
                 <img class="img-gallery" src=${val.src} alt="img-gallery" />
                 <div class="share-container">
+                <div>
+                       
+                    </div>
                 <a download=${`peterobi4president` + val.id} href=${val.src}>
                     <img  class="icon" src="./assets/download.png" alt="share" />
                 </a>
-                    <div>
-                        <img onclick=copyText("${val.src}")  class="icon" src="./assets/share.png" alt="share" />
-                    </div>
+                    
                 </div>
             </div>`
         }else if(val.type === "video"){
